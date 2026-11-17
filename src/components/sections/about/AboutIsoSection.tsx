@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { aboutPageContent } from "@/config/content/about-page";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 const { iso } = aboutPageContent;
 
@@ -11,6 +12,7 @@ export function AboutIsoSection() {
       className="bg-brand-forest py-16 text-white lg:py-24"
     >
       <Container className="grid items-center gap-12 lg:grid-cols-2">
+        <Reveal variant="left">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-lime">
             {iso.eyebrow}
@@ -32,15 +34,18 @@ export function AboutIsoSection() {
             ))}
           </ul>
         </div>
-        <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
+        </Reveal>
+        <Reveal variant="right" delay={120}>
+        <div className="relative aspect-[4/3] min-h-[14rem] overflow-hidden rounded-3xl bg-black/20 sm:min-h-[18rem]">
           <Image
             src={iso.image}
             alt="Modern eco-friendly Melbourne workplace"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
+        </Reveal>
       </Container>
     </section>
   );

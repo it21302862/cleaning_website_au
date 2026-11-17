@@ -1,5 +1,6 @@
 import { servicesPageContent } from "@/config/content/services-page";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 const { sustainability } = servicesPageContent;
 
@@ -7,6 +8,7 @@ export function ServicesSustainabilitySection() {
   return (
     <section className="bg-brand-forest py-16 text-white lg:py-24">
       <Container className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+        <Reveal variant="left">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-lime/30 bg-white/5 px-3 py-1 text-xs font-medium text-brand-lime">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-lime" aria-hidden />
@@ -19,12 +21,12 @@ export function ServicesSustainabilitySection() {
             {sustainability.description}
           </p>
         </div>
+        </Reveal>
         <ul className="space-y-4">
-          {sustainability.cards.map((card) => (
-            <li
-              key={card.title}
-              className="flex items-center gap-4 rounded-2xl border border-white/10 bg-black/20 p-5"
-            >
+          {sustainability.cards.map((card, index) => (
+            <li key={card.title}>
+              <Reveal variant="right" delay={index * 90}>
+              <div className="motion-lift flex items-center gap-4 rounded-2xl border border-white/10 bg-black/20 p-5 hover:border-white/20">
               <span
                 className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-brand-emerald"
                 aria-hidden
@@ -32,6 +34,8 @@ export function ServicesSustainabilitySection() {
                 <CardIcon type={card.icon} />
               </span>
               <h3 className="font-semibold text-white">{card.title}</h3>
+              </div>
+              </Reveal>
             </li>
           ))}
         </ul>

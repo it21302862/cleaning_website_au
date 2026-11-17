@@ -11,7 +11,7 @@ export function AboutHeroSection() {
         className="pointer-events-none absolute -right-24 top-0 h-80 w-80 rounded-full bg-brand-lime/10 blur-3xl"
         aria-hidden
       />
-      <Container className="relative py-14 lg:py-20">
+      <Container className="relative max-w-4xl py-14 motion-hero-center lg:py-20">
         <span className="inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-1.5 text-[11px] font-semibold tracking-[0.2em] text-white/90">
           {hero.eyebrow}
         </span>

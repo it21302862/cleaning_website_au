@@ -1,6 +1,7 @@
 import { homePageContent } from "@/config/content/home-page";
 import { EstimateForm } from "@/components/forms/EstimateForm";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 const { estimate } = homePageContent;
 
@@ -12,7 +13,7 @@ export function EstimateSection() {
       aria-labelledby="estimate-title"
     >
       <Container className="grid items-start gap-12 lg:grid-cols-2">
-        <div className="flex flex-col">
+        <Reveal variant="left" className="flex flex-col">
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-lime/40 bg-white/5 px-4 py-2 text-xs font-medium text-brand-lime">
             <span aria-hidden>✓</span>
             {estimate.badge}
@@ -50,8 +51,10 @@ export function EstimateSection() {
               </li>
             ))}
           </ul>
-        </div>
-        <EstimateForm />
+        </Reveal>
+        <Reveal variant="right" delay={120}>
+          <EstimateForm />
+        </Reveal>
       </Container>
     </section>
   );

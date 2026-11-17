@@ -8,7 +8,7 @@ const { proposal } = contactPageContent;
 const placeholders: Record<string, string> = {
   firstName: "e.g. John",
   lastName: "e.g. Smith",
-  organization: "e.g. Collins St Tower Pty Ltd",
+  organization: "e.g. Ardeer Industrial Park",
   email: "name@company.com.au",
   phone: "0400 000 000",
   floorArea: "e.g. 850",

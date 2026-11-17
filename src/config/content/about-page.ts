@@ -18,7 +18,7 @@ export const aboutPageContent = {
     ],
     quote:
       "To deliver hospital-grade facilities management that completely eliminates synthetic endocrine-disruptors and unnecessary carbon offset dependencies.",
-    image: "/images/about-genesis-team.jpg",
+    image: "/images/about/genesis-team.jpg",
     specialistCard: {
       title: "Fully Vetted Specialists",
       description:
@@ -27,7 +27,7 @@ export const aboutPageContent = {
   },
   stats: [
     {
-      value: "16+ YEARS",
+      value: "25+ YEARS",
       label: "Victorian Heritage",
       detail: "Continuous operations in Melbourne since 2008.",
     },
@@ -75,13 +75,13 @@ export const aboutPageContent = {
     eyebrow: "STRICT GREEN PROTOCOLS",
     title: "ISO Compliant & Carbon-Smart Facilities",
     description:
-      "We take responsibility at every touchpoint. From ISO 14001 environmental frameworks and GECA certifications to non-toxic water-treatment solutions. Your facility remains perfectly clean, safe, and fully compliant with state and federal health guidelines.",
+      "We take responsibility at every touchpoint. From ISO 14001 environmental frameworks and GECA certifications to non toxic water treatment solutions. Your facility remains perfectly clean, safe, and fully compliant with state and federal health guidelines.",
     badges: [
-      "ISO 14001 Certified",
-      "100% Carbon Neutral",
-      "GECA Approved Formulations",
+      // "ISO 14001 Certified",
+      // "100% Carbon Neutral",
+      // "GECA Approved Formulations",
     ],
-    image: "/images/about-iso-facility.jpg",
+    image: "/images/about/iso-facility.jpg",
   },
   cta: {
     eyebrow: "FAST MELBOURNE DISPATCH",
@@ -91,5 +91,5 @@ export const aboutPageContent = {
     phoneLabel: "DIRECT MANAGERIAL ASSIST DESK",
   },
   footerBlurb:
-    "Pioneering sustainable commercial cleaning and facilities maintenance throughout metropolitan Melbourne. Enterprise-grade hygiene standards powered by bio-neutral formulations and transparent carbon reporting.",
+    "Pioneering sustainable commercial cleaning and facilities maintenance throughout metropolitan Melbourne. Enterprise grade hygiene standards powered by bio neutral formulations and transparent carbon reporting.",
 } as const;

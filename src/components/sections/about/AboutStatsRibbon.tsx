@@ -1,5 +1,6 @@
 import { aboutPageContent } from "@/config/content/about-page";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function AboutStatsRibbon() {
   return (
@@ -10,8 +11,9 @@ export function AboutStatsRibbon() {
     >
       <Container>
         <ul className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          {aboutPageContent.stats.map((stat) => (
+          {aboutPageContent.stats.map((stat, index) => (
             <li key={stat.value}>
+              <Reveal variant="center" delay={index * 70}>
               <p className="text-xl font-bold tracking-wide text-white sm:text-2xl">
                 {stat.value}
               </p>
@@ -21,6 +23,7 @@ export function AboutStatsRibbon() {
               <p className="mt-2 text-sm leading-relaxed text-white/75">
                 {stat.detail}
               </p>
+              </Reveal>
             </li>
           ))}
         </ul>

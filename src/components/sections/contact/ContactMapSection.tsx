@@ -1,4 +1,5 @@
 import { contactPageContent } from "@/config/content/contact-page";
+import { Reveal } from "@/components/ui/Reveal";
 
 const { map } = contactPageContent;
 
@@ -7,7 +8,7 @@ export function ContactMapSection() {
 
   return (
     <section className="bg-white pb-0" aria-label={map.title}>
-      <div className="relative h-[min(28rem,70vh)] w-full overflow-hidden">
+      <Reveal variant="center" className="relative h-[min(28rem,70vh)] w-full overflow-hidden">
         <iframe
           title="Green Planet Services — Melbourne Headquarters map"
           src={src}
@@ -16,7 +17,7 @@ export function ContactMapSection() {
           referrerPolicy="no-referrer-when-downgrade"
           allowFullScreen
         />
-      </div>
+      </Reveal>
     </section>
   );
 }

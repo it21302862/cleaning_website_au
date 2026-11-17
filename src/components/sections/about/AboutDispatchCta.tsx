@@ -1,6 +1,7 @@
 import { aboutPageContent } from "@/config/content/about-page";
 import { siteConfig } from "@/config/site";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 const { cta } = aboutPageContent;
 
@@ -9,6 +10,7 @@ export function AboutDispatchCta() {
     <section className="py-12 lg:py-16">
       <Container>
         <div className="grid items-center gap-8 rounded-[2rem] bg-brand-lime/75 px-6 py-10 sm:px-10 lg:grid-cols-[1fr_auto]">
+          <Reveal variant="left">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-emerald">
               {cta.eyebrow}
@@ -20,6 +22,8 @@ export function AboutDispatchCta() {
               {cta.description}
             </p>
           </div>
+          </Reveal>
+          <Reveal variant="right" delay={100}>
           <div className="flex flex-col items-center lg:items-end">
             <a
               href={siteConfig.phones.mobileHref}
@@ -32,6 +36,7 @@ export function AboutDispatchCta() {
               {cta.phoneLabel}
             </p>
           </div>
+          </Reveal>
         </div>
       </Container>
     </section>

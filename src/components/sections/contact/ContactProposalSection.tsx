@@ -2,6 +2,7 @@ import { contactPageContent } from "@/config/content/contact-page";
 import { siteConfig } from "@/config/site";
 import { ProposalForm } from "@/components/forms/ProposalForm";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 const { proposal, directAssist, coordinates } = contactPageContent;
 
@@ -13,6 +14,7 @@ export function ContactProposalSection() {
       aria-labelledby="proposal-title"
     >
       <Container className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
+        <Reveal variant="left">
         <div className="rounded-3xl border border-brand-gray/20 bg-white p-6 shadow-sm sm:p-8">
           <h2
             id="proposal-title"
@@ -27,8 +29,10 @@ export function ContactProposalSection() {
             <ProposalForm />
           </div>
         </div>
+        </Reveal>
 
         <aside className="space-y-6">
+          <Reveal variant="right" delay={100}>
           <div className="rounded-3xl bg-brand-mint/45 p-6 ring-1 ring-brand-emerald/10 sm:p-8">
             <span className="inline-flex rounded-full bg-brand-emerald px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
               {directAssist.tag}
@@ -44,7 +48,9 @@ export function ContactProposalSection() {
               {directAssist.callLabel}
             </a>
           </div>
+          </Reveal>
 
+          <Reveal variant="right" delay={160}>
           <div className="rounded-3xl border border-brand-gray/15 bg-white p-6 sm:p-8">
             <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-brand-emerald">
               {coordinates.heading}
@@ -68,6 +74,7 @@ export function ContactProposalSection() {
               />
             </ul>
           </div>
+          </Reveal>
         </aside>
       </Container>
     </section>

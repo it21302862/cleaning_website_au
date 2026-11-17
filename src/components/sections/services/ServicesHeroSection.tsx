@@ -9,7 +9,7 @@ export function ServicesHeroSection() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand-forest via-[#013d28] to-[#002217] text-white">
       <Container className="grid items-center gap-10 py-14 lg:grid-cols-2 lg:py-20">
-        <div>
+        <div className="motion-hero-from-left">
           <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/90">
             {hero.eyebrow}
           </span>
@@ -29,7 +29,7 @@ export function ServicesHeroSection() {
           </Link>
         </div>
 
-        <div className="overflow-hidden rounded-3xl bg-white text-brand-forest shadow-2xl">
+        <div className="motion-hero-from-right motion-hero-in-delay-2 overflow-hidden rounded-3xl bg-white text-brand-forest shadow-2xl">
           <div className="relative aspect-[16/10]">
             <Image
               src={hero.showcase.image}

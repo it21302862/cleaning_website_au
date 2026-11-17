@@ -24,10 +24,7 @@ export const contactPageContent = {
     heading: "Corporate Coordinates",
     headquarters: {
       title: "Melbourne Headquarters",
-      lines: [
-        "Collins Square, Level 21",
-        "727 Collins St, Melbourne VIC 3008",
-      ],
+      lines: ["132 Forrest St", "Ardeer VIC 3022"],
     },
     inquiries: {
       title: "Inquiries & Tenders",
@@ -78,6 +75,6 @@ export const contactPageContent = {
   },
   map: {
     title: "Melbourne Headquarters",
-    embedQuery: "727+Collins+St,+Melbourne+VIC+3008,+Australia",
+    embedQuery: "132+Forrest+St,+Ardeer+VIC+3022,+Australia",
   },
 } as const;

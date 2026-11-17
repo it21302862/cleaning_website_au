@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { contactPageContent } from "@/config/content/contact-page";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 import { cn } from "@/lib/utils/cn";
 
 const { faq } = contactPageContent;
@@ -13,26 +14,27 @@ export function ContactFaqSection() {
   return (
     <section className="bg-white py-16 lg:py-24" aria-labelledby="faq-title">
       <Container className="max-w-4xl">
-        <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-brand-emerald">
-          {faq.eyebrow}
-        </p>
-        <h2
-          id="faq-title"
-          className="mt-4 text-center font-serif text-3xl text-brand-forest sm:text-4xl"
-        >
-          {faq.title}
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-brand-charcoal sm:text-base">
-          {faq.subtitle}
-        </p>
+        <Reveal variant="center" className="text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-emerald">
+            {faq.eyebrow}
+          </p>
+          <h2
+            id="faq-title"
+            className="mt-4 font-serif text-3xl text-brand-forest sm:text-4xl"
+          >
+            {faq.title}
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-brand-charcoal sm:text-base">
+            {faq.subtitle}
+          </p>
+        </Reveal>
         <ul className="mt-10 space-y-3">
           {faq.items.map((item, index) => {
             const open = openIndex === index;
             return (
-              <li
-                key={item.question}
-                className="overflow-hidden rounded-2xl border border-brand-gray/20 bg-white"
-              >
+              <li key={item.question}>
+                <Reveal variant="up" delay={Math.min(index, 4) * 60}>
+              <div className="overflow-hidden rounded-2xl border border-brand-gray/20 bg-white transition-shadow hover:shadow-sm">
                 <button
                   type="button"
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-semibold text-brand-forest sm:text-base"
@@ -54,6 +56,8 @@ export function ContactFaqSection() {
                     </p>
                   </div>
                 </div>
+              </div>
+                </Reveal>
               </li>
             );
           })}

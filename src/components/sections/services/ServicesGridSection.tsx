@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { servicesPageContent } from "@/config/content/services-page";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
+import { revealVariantAt } from "@/lib/motion/reveal-variant";
 
 const { grid } = servicesPageContent;
 
@@ -8,22 +10,26 @@ export function ServicesGridSection() {
   return (
     <section className="bg-white py-16 lg:py-24">
       <Container>
-        <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-brand-emerald">
-          {grid.eyebrow}
-        </p>
-        <h2 className="mt-4 text-center font-serif text-3xl text-brand-forest sm:text-4xl">
-          {grid.title}
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-base text-brand-slate">
-          {grid.subtitle}
-        </p>
+        <Reveal variant="center" className="text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-emerald">
+            {grid.eyebrow}
+          </p>
+          <h2 className="mt-4 font-serif text-3xl text-brand-forest sm:text-4xl">
+            {grid.title}
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-brand-slate">
+            {grid.subtitle}
+          </p>
+        </Reveal>
         <ul className="mt-12 grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
-          {grid.items.map((service) => (
-            <li
-              id={service.slug}
-              key={service.slug}
-              className="scroll-mt-32 overflow-hidden rounded-2xl border border-brand-gray/15 bg-white shadow-sm"
-            >
+          {grid.items.map((service, index) => (
+            <li id={service.slug} key={service.slug} className="scroll-mt-32">
+              <Reveal
+                variant={revealVariantAt(index)}
+                delay={(index % 3) * 80}
+                className="h-full"
+              >
+              <article className="motion-lift h-full overflow-hidden rounded-2xl border border-brand-gray/15 bg-white shadow-sm hover:shadow-lg">
               <div className="relative aspect-[16/10]">
                 <Image
                   src={service.image}
@@ -58,6 +64,8 @@ export function ServicesGridSection() {
                   ))}
                 </ul>
               </div>
+              </article>
+              </Reveal>
             </li>
           ))}
         </ul>

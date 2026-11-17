@@ -16,20 +16,17 @@ export const siteConfig = {
   email: "contact@greenplanetservices.com.au",
   address: {
     label: "Melbourne Hub",
-    streetAddress: "727 Collins St, Level 23, Collins Square",
-    addressLocality: "Melbourne",
+    streetAddress: "132 Forrest St",
+    addressLocality: "Ardeer",
     addressRegion: "VIC",
-    postalCode: "3008",
+    postalCode: "3022",
     addressCountry: "AU",
-    formatted: [
-      "Collins Square, Melbourne CBD & Greater Victoria Operations",
-    ],
-    hubLine:
-      "Collins Square, Melbourne CBD & Greater Victoria Operations",
+    formatted: ["132 Forrest St", "Ardeer VIC 3022"],
+    hubLine: "132 Forrest St, Ardeer VIC 3022",
   },
   geo: {
-    latitude: -37.8136,
-    longitude: 144.9631,
+    latitude: -37.7747,
+    longitude: 144.7979,
   },
   businessHours: "Mon-Sat: 9:00 AM – 7:00 PM",
   emergencyDispatch:
@@ -44,9 +41,9 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/",
   },
   certifications: [
-    "ISO 14001 Compliant",
-    "100% Carbon Neutral",
-    "GECA Certified",
+    // "ISO 14001 Compliant",
+    // "100% Carbon Neutral",
+    // "GECA Certified",
   ],
 } as const;
 

@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { homePageContent } from "@/config/content/home-page";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
+import { revealVariantAt } from "@/lib/motion/reveal-variant";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const { services } = homePageContent;
@@ -10,6 +12,7 @@ export function ServicesSection() {
   return (
     <section className="bg-white py-16 lg:py-24" aria-labelledby="services-heading">
       <Container>
+        <Reveal variant="center">
         <SectionHeading
           eyebrow={services.eyebrow}
           title={services.title}
@@ -22,10 +25,15 @@ export function ServicesSection() {
           Our services
         </h2>
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.items.map((service) => (
-            <li
-              key={service.slug}
-              className="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md"
+          {services.items.map((service, index) => (
+            <li key={service.slug}>
+              <Reveal
+                variant={revealVariantAt(index)}
+                delay={(index % 3) * 80}
+                className="h-full"
+              >
+            <article
+              className="motion-lift group h-full overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5 hover:shadow-lg"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
@@ -57,9 +65,12 @@ export function ServicesSection() {
                   </Link>
                 </div>
               </div>
+            </article>
+              </Reveal>
             </li>
           ))}
         </ul>
+        </Reveal>
       </Container>
     </section>
   );

@@ -15,13 +15,13 @@ export const homePageContent = {
     trustBar: [
       { label: "Trusted across Melbourne since 2008", icon: "calendar" as const },
       { label: "100% Satisfaction Guarantee", icon: "shield" as const },
-      { label: "Over 20+ Years Commercial Experience", icon: "trophy" as const },
+      { label: "Over 25+ Years Commercial Experience", icon: "trophy" as const },
       {
         label: "Non-Toxic Hospital-Grade Green Chemicals",
         icon: "bottle" as const,
       },
     ],
-    illustration: "/images/hero-commercial-cleaning.jpg",
+    illustration: "/images/home/hero.jpg",
   },
   features: {
     eyebrow: "Why Melbourne Chooses Us",
@@ -71,8 +71,7 @@ export const homePageContent = {
         description:
           "Daily and weekly tailored routines, complete sanitisation of shared work areas, high-touch keyboard points, executive boardrooms, and high-traffic shopping storefronts.",
         footer: "Tailored Shift Rosters",
-        image:
-          "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80",
+        image: "/images/home/office-retail.jpg",
       },
       {
         slug: "commercial-logistics-facility-cleaning",
@@ -81,8 +80,7 @@ export const homePageContent = {
         description:
           "Comprehensive maintenance for multi-bay distribution hubs, school campuses, fitness clubs, and high-security manufacturing complexes requiring strict OHS alignment.",
         footer: "Full OHS Compliance",
-        image:
-          "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80",
+        image: "/images/home/commercial.jpg",
       },
       {
         slug: "floor-polishing-stripping-sealing",
@@ -91,8 +89,7 @@ export const homePageContent = {
         description:
           "Specialist diamond-pad rotary stripping, eco-sealant application, and buffing for hardwood, heavy-duty vinyl, terrazzo, granite, and polished concrete.",
         footer: "Non-Toxic Polymer Seals",
-        image:
-          "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=900&q=80",
+        image: "/images/home/floor-polishing.jpg",
       },
       {
         slug: "commercial-carpet-upholstery-steam-cleaning",
@@ -101,8 +98,7 @@ export const homePageContent = {
         description:
           "Hot water extraction and allergen neutralization for corporate carpets, acoustic wall panels, and high-wear upholstery with fast-dry botanical enzyme rinsing.",
         footer: "2-Hour Rapid Dry",
-        image:
-          "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80",
+        image: "/images/home/steam-cleaning.jpg",
       },
       {
         slug: "multi-storey-window-glass-cleaning",
@@ -111,8 +107,7 @@ export const homePageContent = {
         description:
           "Streak-free crystal clarity using deionized pure water filtration poles for multi-storey exterior glazing, internal partition glass, and architectural atrium skylights.",
         footer: "Zero Chemical Runoff",
-        image:
-          "https://images.unsplash.com/photo-1565008576549-57569a49371d?auto=format&fit=crop&w=900&q=80",
+        image: "/images/home/window-cleaning.jpg",
       },
       {
         slug: "medical-grade-decon-sanitization",
@@ -121,8 +116,7 @@ export const homePageContent = {
         description:
           "Hospital-grade biological decontamination utilizing cold-fogging electrostatic misting with 99.999% efficacy against viral pathogens, without residual toxicity.",
         footer: "Medical Compliance Grade",
-        image:
-          "https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?auto=format&fit=crop&w=900&q=80",
+        image: "/images/home/sanitization.jpg",
       },
     ],
   },
@@ -149,8 +143,37 @@ export const homePageContent = {
     title: "Endorsed By Melbourne Property Leaders Since 2008",
     description:
       "Verbatim testimonials from our long-term commercial partners, building owners, and community institutions across Victoria.",
+    /** Eight client banners in provided image order (four clients × two banners). */
     items: [
       {
+        id: "john-bradshaw-1",
+        quote:
+          "Patrick and his associates have been maintaining my Commercial and Residential Properties since 2008. I can attest to his strong work ethic, reliability, and attention to detail. I never hesitate to refer prospective customers to Patrick, as he's a class act.",
+        tenure: "Since 2008",
+        name: "John Bradshaw",
+        role: "Property Investor & Business Owner",
+        initials: "JB",
+      },
+      {
+        id: "nicholas-h-1",
+        quote:
+          "I have been using Green Planet Services for the last couple of months on both our commercial and residential properties. The standard they provide is very high and their pricing is unbeatable. I would strongly recommend Green Planet Services to anyone looking for a professional, hassle free cleaning service.",
+        tenure: "Commercial & Residential",
+        name: "Nicholas H",
+        role: "Building Owner",
+        initials: "NH",
+      },
+      {
+        id: "zac-potier-1",
+        quote:
+          "Green Planet Services has been looking after the cleaning at the City of Melbourne Bowls Club since 2008. Pat and his team offer excellent service at reasonable rates and I have no hesitation in recommending their services. They are flexible with cleaning schedules which helps us navigate our seasonal business requirements and are always on hand to assist with extra services when required.",
+        tenure: "Since 2008",
+        name: "Zac Potier",
+        role: "City of Melbourne Bowls Club",
+        initials: "ZP",
+      },
+      {
+        id: "iudita-trifa-1",
         quote:
           "Out Doors Inc. have used Green Planet Services for 7 years. They are friendly and approachable, reliable and trustworthy. I am more than happy to recommend them to anyone requiring their cleaning services.",
         tenure: "7+ Years Client",
@@ -159,6 +182,7 @@ export const homePageContent = {
         initials: "IT",
       },
       {
+        id: "john-bradshaw-2",
         quote:
           "Patrick and his associates have been maintaining my Commercial and Residential Properties since 2008. I can attest to his strong work ethic, reliability, and attention to detail. I never hesitate to refer prospective customers to Patrick, as he's a class act.",
         tenure: "Since 2008",
@@ -166,11 +190,39 @@ export const homePageContent = {
         role: "Property Investor & Business Owner",
         initials: "JB",
       },
+      {
+        id: "nicholas-h-2",
+        quote:
+          "I have been using Green Planet Services for the last couple of months on both our commercial and residential properties. The standard they provide is very high and their pricing is unbeatable. I would strongly recommend Green Planet Services to anyone looking for a professional, hassle free cleaning service.",
+        tenure: "Commercial & Residential",
+        name: "Nicholas H",
+        role: "Building Owner",
+        initials: "NH",
+      },
+      {
+        id: "zac-potier-2",
+        quote:
+          "Green Planet Services has been looking after the cleaning at the City of Melbourne Bowls Club since 2008. Pat and his team offer excellent service at reasonable rates and I have no hesitation in recommending their services. They are flexible with cleaning schedules which helps us navigate our seasonal business requirements and are always on hand to assist with extra services when required.",
+        tenure: "Since 2008",
+        name: "Zac Potier",
+        role: "City of Melbourne Bowls Club",
+        initials: "ZP",
+      },
+      {
+        id: "iudita-trifa-2",
+        quote:
+          "Out Doors Inc. have used Green Planet Services for 7 years. They are friendly and approachable, reliable and trustworthy. I am more than happy to recommend them to anyone requiring their cleaning services.",
+        tenure: "7+ Years Client",
+        name: "Iudita Trifa–Schmidt",
+        role: "CEO, Out Doors Inc.",
+        initials: "IT",
+      },
     ],
   },
   urgentCta: {
     eyebrow: "Fast Assistance",
     title: "Need An Urgent Clean?",
     sublabel: "Speed Dial",
+    image: "/images/urgent-service.jpg",
   },
 } as const;

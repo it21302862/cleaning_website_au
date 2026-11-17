@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { aboutPageContent } from "@/config/content/about-page";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 const { genesis } = aboutPageContent;
 
@@ -8,6 +9,7 @@ export function AboutGenesisSection() {
   return (
     <section className="bg-white py-16 lg:py-24">
       <Container className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+        <Reveal variant="left">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-emerald">
             {genesis.eyebrow}
@@ -24,7 +26,9 @@ export function AboutGenesisSection() {
             &ldquo;{genesis.quote}&rdquo;
           </blockquote>
         </div>
+        </Reveal>
 
+        <Reveal variant="right" delay={120}>
         <div className="relative">
           <div className="relative aspect-[5/4] overflow-hidden rounded-3xl bg-brand-surface">
             <Image
@@ -54,6 +58,7 @@ export function AboutGenesisSection() {
             </div>
           </div>
         </div>
+        </Reveal>
       </Container>
     </section>
   );

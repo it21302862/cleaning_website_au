@@ -14,7 +14,7 @@ export function HeroSection() {
         aria-hidden
       />
       <Container className="relative grid items-center gap-10 py-12 lg:grid-cols-2 lg:py-16">
-        <div>
+        <div className="motion-hero-from-left">
           <div className="flex flex-wrap gap-2">
             {hero.badges.map((badge) => (
               <span
@@ -65,25 +65,25 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[18rem] sm:max-w-xs lg:max-w-sm">
+        <div className="relative mx-auto w-full max-w-[20rem] motion-hero-from-right motion-hero-in-delay-2 sm:max-w-sm lg:max-w-md">
           <div
-            className="absolute inset-0 scale-[1.08] rounded-full bg-sky-200/25"
+            className="absolute inset-0 scale-[1.06] rounded-full bg-sky-200/25"
             aria-hidden
           />
-          <div className="relative aspect-square w-full overflow-hidden rounded-full ring-1 ring-white/15 shadow-2xl">
+          <div className="relative aspect-square w-full min-h-[16rem] overflow-hidden rounded-full ring-1 ring-white/15 shadow-2xl sm:min-h-[18rem]">
             <Image
               src={hero.illustration}
               alt="Professional commercial cleaning team"
               fill
-              className="object-cover object-center"
-              sizes="(max-width: 1024px) 72vw, 384px"
+              className="object-cover object-[center_42%]"
+              sizes="(max-width: 1024px) 80vw, 448px"
               priority
             />
           </div>
         </div>
       </Container>
 
-      <div className="border-t border-white/10 bg-black/15">
+      <div className="border-t border-white/10 bg-black/15 motion-hero-center motion-hero-in-delay-3">
         <Container className="grid gap-6 py-8 sm:grid-cols-2 lg:grid-cols-4">
           {hero.trustBar.map((item) => (
             <div

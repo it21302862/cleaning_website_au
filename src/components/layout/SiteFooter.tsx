@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/Container";
 export function SiteFooter() {
   return (
     <footer className="bg-brand-forest text-white">
-      <Container className="grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
+      <Container className="grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-3">
         <div>
           <p className="text-lg font-bold">{siteConfig.name}</p>
           <p className="mt-4 text-sm leading-relaxed text-white/75">
@@ -66,31 +66,6 @@ export function SiteFooter() {
             </li>
           </ul>
         </div>
-
-        <div>
-          <h3 className="text-sm font-bold text-white">Follow Us</h3>
-          <div className="mt-4 flex gap-3">
-            {(
-              [
-                ["LinkedIn", siteConfig.social.linkedin],
-                ["Twitter", siteConfig.social.twitter],
-                ["Facebook", siteConfig.social.facebook],
-                ["Instagram", siteConfig.social.instagram],
-              ] as const
-            ).map(([label, href]) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full text-white/90 hover:text-brand-lime"
-                aria-label={label}
-              >
-                <SocialIcon network={label} />
-              </a>
-            ))}
-          </div>
-        </div>
       </Container>
 
       <div className="border-t border-white/10">
@@ -148,35 +123,4 @@ function ClockIcon() {
       <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
   );
-}
-
-function SocialIcon({ network }: { network: string }) {
-  switch (network) {
-    case "LinkedIn":
-      return (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-          <path d="M6 9h3v12H6V9zm1.5-4.5a1.75 1.75 0 110 3.5 1.75 1.75 0 010-3.5zM11 9h2.9v1.6h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V21h-3v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.74V21h-3V9z" />
-        </svg>
-      );
-    case "Twitter":
-      return (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-          <path d="M18.2 4h3.3l-7.2 8.2 8.5 11.8h-6.6l-5.2-6.8-5.9 6.8H2l7.7-8.8L2 4h6.8l4.7 6.2L18.2 4zm-1.2 17.2h1.8L7.1 5.7H5.2l11.8 15.5z" />
-        </svg>
-      );
-    case "Facebook":
-      return (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-          <path d="M14 9h3V6h-3c-2.8 0-5 2.2-5 5v2H7v3h4v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z" />
-        </svg>
-      );
-    case "Instagram":
-      return (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-          <path d="M7 4h10a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3zm5 4a5 5 0 100 10 5 5 0 000-10zm6.5-.8a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z" />
-        </svg>
-      );
-    default:
-      return null;
-  }
 }

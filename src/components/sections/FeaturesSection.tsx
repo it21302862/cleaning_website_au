@@ -1,5 +1,7 @@
 import { homePageContent } from "@/config/content/home-page";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
+import { revealVariantAt } from "@/lib/motion/reveal-variant";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const { features } = homePageContent;
@@ -8,6 +10,7 @@ export function FeaturesSection() {
   return (
     <section id="how-we-work" className="bg-white py-16 lg:py-24">
       <Container>
+        <Reveal variant="left">
         <SectionHeading
           eyebrow={features.eyebrow}
           title={features.title}
@@ -24,7 +27,8 @@ export function FeaturesSection() {
                 index === 2 ? "lg:col-start-2" : undefined
               }
             >
-              <article className="flex h-full flex-col rounded-3xl bg-brand-mint/45 p-8 text-brand-forest ring-1 ring-brand-emerald/10">
+              <Reveal variant={revealVariantAt(index)} delay={index * 80} className="h-full">
+              <article className="motion-lift flex h-full flex-col rounded-3xl bg-brand-mint/45 p-8 text-brand-forest ring-1 ring-brand-emerald/10 shadow-sm hover:shadow-md">
                 <div className="flex items-start justify-between gap-4">
                   <FeatureIcon type={feature.icon} />
                   <span className="shrink-0 rounded-full bg-brand-emerald px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white">
@@ -40,9 +44,11 @@ export function FeaturesSection() {
                   <FooterIcon type={feature.footerIcon} />
                 </div>
               </article>
+              </Reveal>
             </li>
           ))}
         </ul>
+        </Reveal>
       </Container>
     </section>
   );

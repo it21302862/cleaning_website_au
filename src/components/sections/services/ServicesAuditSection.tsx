@@ -1,6 +1,7 @@
 import { servicesPageContent } from "@/config/content/services-page";
 import { ServicesAuditForm } from "@/components/forms/ServicesAuditForm";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 const { audit } = servicesPageContent;
 
@@ -9,6 +10,7 @@ export function ServicesAuditSection() {
     <section className="py-12 lg:py-16">
       <Container>
         <div className="grid gap-10 rounded-[2rem] bg-brand-lime/70 px-6 py-10 sm:px-10 lg:grid-cols-2 lg:gap-12">
+          <Reveal variant="left">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-charcoal/80">
               {audit.eyebrow}
@@ -33,9 +35,12 @@ export function ServicesAuditSection() {
               ))}
             </ul>
           </div>
+          </Reveal>
+          <Reveal variant="right" delay={100}>
           <div className="rounded-3xl bg-white p-6 shadow-lg sm:p-8">
             <ServicesAuditForm />
           </div>
+          </Reveal>
         </div>
       </Container>
     </section>

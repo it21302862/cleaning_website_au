@@ -1,5 +1,6 @@
 import { servicesPageContent } from "@/config/content/services-page";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 const { advantage } = servicesPageContent;
 
@@ -7,16 +8,19 @@ export function ServicesAdvantageSection() {
   return (
     <section className="bg-white py-16 lg:py-24">
       <Container>
-        <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-brand-emerald">
-          {advantage.eyebrow}
-        </p>
-        <h2 className="mt-4 text-center font-serif text-3xl text-brand-forest sm:text-4xl">
-          {advantage.title}
-        </h2>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-brand-charcoal sm:text-base">
-          {advantage.intro}
-        </p>
-        <div className="mt-10 overflow-x-auto rounded-3xl border border-brand-gray/15 bg-white shadow-sm">
+        <Reveal variant="center" className="text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-emerald">
+            {advantage.eyebrow}
+          </p>
+          <h2 className="mt-4 font-serif text-3xl text-brand-forest sm:text-4xl">
+            {advantage.title}
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-brand-charcoal sm:text-base">
+            {advantage.intro}
+          </p>
+        </Reveal>
+        <Reveal variant="up" className="mt-10" delay={80}>
+        <div className="overflow-x-auto rounded-3xl border border-brand-gray/15 bg-white shadow-sm">
           <table className="w-full min-w-[40rem] border-collapse text-left text-sm">
             <thead>
               <tr className="border-b border-brand-gray/15">
@@ -69,6 +73,7 @@ export function ServicesAdvantageSection() {
             </tbody>
           </table>
         </div>
+        </Reveal>
       </Container>
     </section>
   );

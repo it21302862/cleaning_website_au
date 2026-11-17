@@ -10,7 +10,7 @@ export function ContactHeroSection() {
         className="pointer-events-none absolute -right-24 top-0 h-80 w-80 rounded-full bg-brand-lime/10 blur-3xl"
         aria-hidden
       />
-      <Container className="relative py-14 lg:py-20">
+      <Container className="relative max-w-4xl py-14 motion-hero-center lg:py-20">
         <span className="inline-flex rounded-full border border-brand-lime/35 bg-white/5 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-lime">
           {hero.eyebrow}
         </span>

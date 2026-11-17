@@ -8,7 +8,7 @@ export const servicesPageContent = {
       "Engineered hygiene protocols for corporate headquarters, logistics hubs, retail precincts, and healthcare environments across Greater Melbourne. Hospital-grade cleanliness delivered without caustic toxins.",
     cta: "Book Melbourne Site Assessment",
     showcase: {
-      image: "/images/about-iso-facility.jpg",
+      image: "/images/service-page-hero.jpg",
       title: "Rapid Dispatch Melbourne",
       location: "CBD, Docklands, Dandenong & Western Suburbs",
       stats: [
@@ -35,7 +35,7 @@ export const servicesPageContent = {
           "GECA certified botanical surface virucides",
           "HEPA-filtered quiet vacuuming (sub-60dB)",
         ],
-        image: "/images/about-genesis-team.jpg",
+        image: "/images/service-office-retail.jpg",
       },
       {
         slug: "commercial-logistics-facility-cleaning",
@@ -48,7 +48,7 @@ export const servicesPageContent = {
           "Loading dock degreasing using enzyme biodigesters",
           "Industrial staff locker room and wellness sanitization",
         ],
-        image: "/images/services-warehouse.jpg",
+        image: "/images/service-commercial-logistics.jpg",
       },
       {
         slug: "floor-polishing-stripping-sealing",
@@ -61,7 +61,7 @@ export const servicesPageContent = {
           "Diamond-impregnated rotary pad polishing",
           "Australian AS 4586 Slip-Resistance compliance",
         ],
-        image: "/images/services-floor.jpg",
+        image: "/images/service-floor-polishing.jpg",
       },
       {
         slug: "commercial-carpet-upholstery-steam-cleaning",
@@ -74,7 +74,7 @@ export const servicesPageContent = {
           "Zero petrochemical detergent residue; 100% biodegradable",
           "Extended lifespan for commercial carpet warranty specs",
         ],
-        image: "/images/services-carpet.jpg",
+        image: "/images/home/steam-cleaning.jpg",
       },
       {
         slug: "multi-storey-window-glass-cleaning",
@@ -87,7 +87,7 @@ export const servicesPageContent = {
           "Fully certified IRATA abseil & boom-lift operators",
           "Hydrophobic treatment resisting Victorian coastal dust",
         ],
-        image: "/images/services-windows.jpg",
+        image: "/images/service-multi-store.jpg",
       },
       {
         slug: "medical-grade-decon-sanitization",
@@ -100,7 +100,7 @@ export const servicesPageContent = {
           "TGA-listed non-toxic virucidal hydrogen formulations",
           "Digital surface ATP luminescence swab verification",
         ],
-        image: "/images/services-sanitization.jpg",
+        image: "/images/service-medical-grade-eco.jpg",
       },
     ],
   },
@@ -147,7 +147,7 @@ export const servicesPageContent = {
     badge: "ESG Compliance Verified",
     title: "Improve Your Building’s Sustainability & Performance",
     description:
-      "Environmental accountability is no longer optional for Melbourne facility managers. Green Planet reduces indoor air contamination, optimizes water usage, and delivers transparent carbon reporting — without compromising hospital-grade hygiene outcomes.",
+      "Environmental accountability is no longer optional for Melbourne facility managers. Green Planet reduces indoor air contamination, optimizes water usage, and delivers transparent carbon reporting without compromising hospital-grade hygiene outcomes.",
     cards: [
       { title: "Public Liability & WorkCover", icon: "shield" as const },
       { title: "Closed-Loop Packaging", icon: "recycle" as const },
@@ -167,7 +167,7 @@ export const servicesPageContent = {
     form: {
       fields: {
         company: "Company / Facility Name",
-        companyPlaceholder: "e.g. Collins St Commercial Tower",
+        companyPlaceholder: "e.g. Forrest St Commercial Facility",
         contactName: "Contact Name",
         contactPlaceholder: "Patrick Bradshaw",
         phone: "Phone Number",

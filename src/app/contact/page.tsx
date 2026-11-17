@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/lib/seo/metadata";
 export const metadata = createPageMetadata({
   title: "Contact Us",
   description:
-    "Contact Green Planet Services in Melbourne — request a proposal, call 0422 104 633, or visit Collins Square. Fast response within 2 hours.",
+    "Contact Green Planet Services in Melbourne — request a proposal, call 0422 104 633, or visit 132 Forrest St, Ardeer VIC 3022. Fast response within 2 hours.",
   path: "/contact",
 });
 

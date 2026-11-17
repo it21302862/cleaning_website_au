@@ -1,5 +1,6 @@
 import { aboutPageContent } from "@/config/content/about-page";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 const { principles } = aboutPageContent;
 
@@ -7,18 +8,23 @@ export function AboutPrinciplesSection() {
   return (
     <section className="bg-white py-16 lg:py-24">
       <Container>
-        <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-brand-emerald">
-          {principles.eyebrow}
-        </p>
-        <h2 className="mt-4 text-center font-serif text-3xl text-brand-forest sm:text-4xl">
-          {principles.title}
-        </h2>
+        <Reveal variant="center" className="text-center">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-emerald">
+            {principles.eyebrow}
+          </p>
+          <h2 className="mt-4 font-serif text-3xl text-brand-forest sm:text-4xl">
+            {principles.title}
+          </h2>
+        </Reveal>
         <ul className="mt-12 grid gap-6 lg:grid-cols-3">
-          {principles.items.map((item) => (
-            <li
-              key={item.title}
-              className="rounded-2xl bg-brand-surface p-8 ring-1 ring-brand-gray/15"
-            >
+          {principles.items.map((item, index) => (
+            <li key={item.title}>
+              <Reveal
+                variant={index === 0 ? "left" : index === 1 ? "center" : "right"}
+                delay={index * 90}
+                className="h-full"
+              >
+            <article className="motion-lift h-full rounded-2xl bg-brand-surface p-8 ring-1 ring-brand-gray/15 hover:shadow-md">
               <span
                 className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-mint/70 text-brand-emerald"
                 aria-hidden
@@ -31,6 +37,8 @@ export function AboutPrinciplesSection() {
               <p className="mt-3 text-sm leading-relaxed text-brand-charcoal">
                 {item.description}
               </p>
+            </article>
+              </Reveal>
             </li>
           ))}
         </ul>

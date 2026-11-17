@@ -1,5 +1,6 @@
 import { PageIntro } from "@/components/layout/PageIntro";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 import { createPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata = createPageMetadata({
@@ -15,7 +16,9 @@ export default function CaseStudiesPage() {
         title="Case Studies"
         description="Client success stories will be published here as you share additional designs."
       />
-      <Container className="pb-16 text-brand-slate">Coming soon.</Container>
+      <Container className="pb-16 text-brand-slate">
+        <Reveal variant="up">Coming soon.</Reveal>
+      </Container>
     </>
   );
 }

@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils/cn";
 export function SiteHeader() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -37,8 +38,20 @@ export function SiteHeader() {
     };
   }, [mobileOpen]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 shadow-sm">
+    <header
+      className={cn(
+        "sticky top-0 z-50 bg-white/95 backdrop-blur-md transition-[box-shadow,background-color] duration-300",
+        scrolled ? "shadow-md" : "shadow-sm",
+      )}
+    >
       <TopBar />
       <div className="border-b border-brand-gray/10 bg-white py-3">
         <Container as="nav" aria-label="Main">
@@ -75,36 +88,44 @@ export function SiteHeader() {
       </div>
 
       {mobileOpen ? (
-        <div className="fixed inset-0 top-[7.5rem] z-40 flex flex-col bg-white lg:hidden">
-          <div className="flex-1 overflow-y-auto px-4 py-6">
-            <ul className="space-y-1">
-              {primaryNav.map((item) => (
-                <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    className={cn(
-                      "block rounded-lg px-2 py-3 text-base font-medium text-brand-forest hover:bg-brand-mint/40",
-                      isActive(item.href) && "bg-brand-forest text-white",
-                    )}
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+        <>
+          <button
+            type="button"
+            aria-label="Close menu"
+            className="motion-fade-in fixed inset-0 top-[7.5rem] z-30 bg-brand-forest/15 lg:hidden"
+            onClick={() => setMobileOpen(false)}
+          />
+          <div className="motion-slide-in fixed inset-0 top-[7.5rem] z-40 flex flex-col bg-white lg:hidden">
+            <div className="flex-1 overflow-y-auto px-4 py-6">
+              <ul className="space-y-1">
+                {primaryNav.map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        "block rounded-lg px-2 py-3 text-base font-medium text-brand-forest transition-colors hover:bg-brand-mint/40",
+                        isActive(item.href) && "bg-brand-forest text-white",
+                      )}
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="border-t border-brand-mint p-4">
+              <Button
+                href={headerCtaHref}
+                variant="dark"
+                className="w-full"
+                onClick={() => setMobileOpen(false)}
+              >
+                {headerCta}
+              </Button>
+            </div>
           </div>
-          <div className="border-t border-brand-mint p-4">
-            <Button
-              href={headerCtaHref}
-              variant="dark"
-              className="w-full"
-              onClick={() => setMobileOpen(false)}
-            >
-              {headerCta}
-            </Button>
-          </div>
-        </div>
+        </>
       ) : null}
     </header>
   );
