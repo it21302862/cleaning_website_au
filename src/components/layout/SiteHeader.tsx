@@ -39,6 +39,10 @@ export function SiteHeader() {
   }, [mobileOpen]);
 
   useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -53,7 +57,7 @@ export function SiteHeader() {
       )}
     >
       <TopBar />
-      <div className="border-b border-brand-gray/10 bg-white py-3">
+      <div className="relative border-b border-brand-gray/10 bg-white py-3">
         <Container as="nav" aria-label="Main">
           <div className="flex h-14 items-center justify-between gap-4 lg:h-16">
             <Logo />
@@ -76,7 +80,7 @@ export function SiteHeader() {
 
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-brand-mint text-brand-forest lg:hidden"
+              className="relative z-[60] inline-flex h-10 w-10 items-center justify-center rounded-lg border border-brand-mint bg-white text-brand-forest lg:hidden"
               aria-expanded={mobileOpen}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               onClick={() => setMobileOpen((o) => !o)}
@@ -85,48 +89,48 @@ export function SiteHeader() {
             </button>
           </div>
         </Container>
-      </div>
 
-      {mobileOpen ? (
-        <>
-          <button
-            type="button"
-            aria-label="Close menu"
-            className="motion-fade-in fixed inset-0 top-[7.5rem] z-30 bg-brand-forest/15 lg:hidden"
-            onClick={() => setMobileOpen(false)}
-          />
-          <div className="motion-slide-in fixed inset-0 top-[7.5rem] z-40 flex flex-col bg-white lg:hidden">
-            <div className="flex-1 overflow-y-auto px-4 py-6">
-              <ul className="space-y-1">
-                {primaryNav.map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        "block rounded-lg px-2 py-3 text-base font-medium text-brand-forest transition-colors hover:bg-brand-mint/40",
-                        isActive(item.href) && "bg-brand-forest text-white",
-                      )}
-                      onClick={() => setMobileOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+        {mobileOpen ? (
+          <>
+            <button
+              type="button"
+              aria-label="Close menu"
+              className="fixed inset-0 z-40 bg-brand-forest/20 lg:hidden"
+              onClick={() => setMobileOpen(false)}
+            />
+            <div className="absolute left-0 right-0 top-full z-50 flex max-h-[min(32rem,calc(100dvh-4.5rem))] flex-col border-t border-brand-gray/10 bg-white shadow-lg lg:hidden">
+              <div className="max-h-[min(24rem,calc(100dvh-12rem))] overflow-y-auto px-4 py-4">
+                <ul className="space-y-1">
+                  {primaryNav.map((item) => (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          "block rounded-lg px-3 py-3 text-base font-medium text-brand-forest transition-colors hover:bg-brand-mint/40",
+                          isActive(item.href) && "bg-brand-forest text-white",
+                        )}
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="shrink-0 border-t border-brand-mint p-4">
+                <Button
+                  href={headerCtaHref}
+                  variant="dark"
+                  className="w-full"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {headerCta}
+                </Button>
+              </div>
             </div>
-            <div className="border-t border-brand-mint p-4">
-              <Button
-                href={headerCtaHref}
-                variant="dark"
-                className="w-full"
-                onClick={() => setMobileOpen(false)}
-              >
-                {headerCta}
-              </Button>
-            </div>
-          </div>
-        </>
-      ) : null}
+          </>
+        ) : null}
+      </div>
     </header>
   );
 }

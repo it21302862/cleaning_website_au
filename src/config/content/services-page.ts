@@ -91,19 +91,6 @@ const servicesPageContentSource = {
         ],
         image: "/images/service-multi-store.jpg",
       },
-      {
-        slug: "medical-grade-decon-sanitization",
-        tag: "Healthcare & Clinical Precisions",
-        title: "Medical-Grade Eco-Sanitization",
-        description:
-          "Specialized infection barrier control designed for medical clinics, pathology labs, aged care facilities, and preschools. Neutralizes 99.999% of airborne and surface pathogens using food-safe botanical extracts.",
-        checklist: [
-          "Electrostatic wrap-around micro-droplet coverage",
-          "TGA-listed non-toxic virucidal hydrogen formulations",
-          "Digital surface ATP luminescence swab verification",
-        ],
-        image: "/images/service-medical-grade-eco.jpg",
-      },
     ],
   },
   advantage: {

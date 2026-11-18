@@ -3,8 +3,11 @@ import { servicesPageContent } from "@/config/content/services-page";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { revealVariantAt } from "@/lib/motion/reveal-variant";
+import { cn } from "@/lib/utils/cn";
 
 const { grid } = servicesPageContent;
+const serviceCount = grid.items.length;
+const lastRowPair = serviceCount % 3 === 2;
 
 export function ServicesGridSection() {
   return (
@@ -21,22 +24,37 @@ export function ServicesGridSection() {
             {grid.subtitle}
           </p>
         </Reveal>
-        <ul className="mt-12 grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+        <ul className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-6">
           {grid.items.map((service, index) => (
-            <li id={service.slug} key={service.slug} className="scroll-mt-32">
+            <li
+              id={service.slug}
+              key={service.slug}
+              className={cn(
+                "scroll-mt-32 lg:col-span-2",
+                lastRowPair &&
+                  index === serviceCount - 2 &&
+                  "lg:col-start-2",
+                lastRowPair &&
+                  index === serviceCount - 1 &&
+                  "lg:col-start-4",
+                serviceCount % 2 === 1 &&
+                  index === serviceCount - 1 &&
+                  "md:col-span-2 md:mx-auto md:max-w-lg md:justify-self-center",
+              )}
+            >
               <Reveal
                 variant={revealVariantAt(index)}
                 delay={(index % 3) * 80}
                 className="h-full"
               >
-              <article className="motion-lift h-full overflow-hidden rounded-2xl border border-brand-gray/15 bg-white shadow-sm hover:shadow-lg">
-              <div className="relative aspect-[16/10]">
+              <article className="motion-lift flex h-full w-full flex-col overflow-hidden rounded-2xl border border-brand-gray/15 bg-white shadow-sm hover:shadow-lg">
+              <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 1280px) 50vw, 33vw"
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
               <div className="p-6">
