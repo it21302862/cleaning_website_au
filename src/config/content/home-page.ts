@@ -96,7 +96,7 @@ const homePageContentSource = {
       {
         slug: "commercial-carpet-upholstery-steam-cleaning",
         badge: "Deep Extraction",
-        title: "Steam Cleaning",
+        title: "Carpet Cleaning",
         description:
           "Hot water extraction and allergen neutralization for corporate carpets, acoustic wall panels, and high-wear upholstery with fast-dry botanical enzyme rinsing.",
         footer: "2-Hour Rapid Dry",

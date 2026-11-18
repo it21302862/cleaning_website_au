@@ -74,10 +74,10 @@ const aboutPageContentSource = {
     ],
   },
   iso: {
-    eyebrow: "STRICT GREEN PROTOCOLS",
-    title: "ISO Compliant & Carbon-Smart Facilities",
+    eyebrow: "PROFESSIONAL SERVICE STANDARDS",
+    title: "Professional Cleaning & Reliable Facilities Management",
     description:
-      "We take responsibility at every touchpoint. From ISO 14001 environmental frameworks and GECA certifications to non toxic water treatment solutions. Your facility remains perfectly clean, safe, and fully compliant with state and federal health guidelines.",
+      "Green Planet Services is committed to maintaining clean, safe and well presented facilities. Our experienced team delivers reliable cleaning and maintenance solutions tailored to each client's needs. We focus on quality workmanship, workplace hygiene and consistent service to ensure every facility is maintained to a high standard.",
     badges: [
       // "ISO 14001 Certified",
       // "100% Carbon Neutral",
