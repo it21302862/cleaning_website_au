@@ -1,5 +1,7 @@
+import { dehyphenateCopy } from "@/lib/text/dehyphenate-copy";
+
 /** Copy aligned to About Us Figma — update here if design text changes. */
-export const aboutPageContent = {
+const aboutPageContentSource = {
   hero: {
     eyebrow: "ESTABLISHED IN MELBOURNE, 2008",
     title: "Pioneering Commercial Hygiene, Rooted in",
@@ -93,3 +95,5 @@ export const aboutPageContent = {
   footerBlurb:
     "Pioneering sustainable commercial cleaning and facilities maintenance throughout metropolitan Melbourne. Enterprise grade hygiene standards powered by bio neutral formulations and transparent carbon reporting.",
 } as const;
+
+export const aboutPageContent = dehyphenateCopy(aboutPageContentSource);

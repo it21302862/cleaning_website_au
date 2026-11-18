@@ -1,5 +1,7 @@
+import { dehyphenateCopy } from "@/lib/text/dehyphenate-copy";
+
 /** Copy aligned to Contact Us Figma */
-export const contactPageContent = {
+const contactPageContentSource = {
   hero: {
     eyebrow: "Rapid Response Operations",
     title: "Get in Touch With",
@@ -78,3 +80,5 @@ export const contactPageContent = {
     embedQuery: "132+Forrest+St,+Ardeer+VIC+3022,+Australia",
   },
 } as const;
+
+export const contactPageContent = dehyphenateCopy(contactPageContentSource);

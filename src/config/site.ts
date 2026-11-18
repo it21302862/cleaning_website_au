@@ -1,4 +1,6 @@
-export const siteConfig = {
+import { dehyphenateCopy } from "@/lib/text/dehyphenate-copy";
+
+const siteConfigSource = {
   name: "Green Planet Services",
   legalName: "Green Planet Services Pty Ltd",
   description:
@@ -47,4 +49,6 @@ export const siteConfig = {
   ],
 } as const;
 
-export type SiteConfig = typeof siteConfig;
+export const siteConfig = dehyphenateCopy(siteConfigSource);
+
+export type SiteConfig = typeof siteConfigSource;

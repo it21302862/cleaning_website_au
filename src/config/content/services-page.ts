@@ -1,5 +1,7 @@
+import { dehyphenateCopy } from "@/lib/text/dehyphenate-copy";
+
 /** Copy aligned to Services page Figma */
-export const servicesPageContent = {
+const servicesPageContentSource = {
   hero: {
     eyebrow: "Commercial Facilities Services",
     title: "Comprehensive",
@@ -181,5 +183,7 @@ export const servicesPageContent = {
   },
 } as const;
 
+export const servicesPageContent = dehyphenateCopy(servicesPageContentSource);
+
 export type ServicesPageService =
-  (typeof servicesPageContent.grid.items)[number];
+  (typeof servicesPageContentSource.grid.items)[number];

@@ -1,5 +1,7 @@
+import { dehyphenateCopy } from "@/lib/text/dehyphenate-copy";
+
 /** Copy aligned to homepage Figma */
-export const homePageContent = {
+const homePageContentSource = {
   hero: {
     badges: [
       "100% Eco-Certified Commercial Facilities Management",
@@ -226,3 +228,5 @@ export const homePageContent = {
     image: "/images/urgent-service.jpg",
   },
 } as const;
+
+export const homePageContent = dehyphenateCopy(homePageContentSource);
