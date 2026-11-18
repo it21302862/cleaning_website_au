@@ -93,7 +93,7 @@ const aboutPageContentSource = {
     phoneLabel: "DIRECT MANAGERIAL ASSIST DESK",
   },
   footerBlurb:
-    "Pioneering sustainable commercial cleaning and facilities maintenance throughout metropolitan Melbourne. Enterprise grade hygiene standards powered by bio neutral formulations and transparent carbon reporting.",
+    "Providing professional commercial cleaning and facilities management services across metropolitan Melbourne. We are committed to delivering reliable service, maintaining clean and hygienic workplaces, and creating better environments for businesses and their people.",
 } as const;
 
 export const aboutPageContent = dehyphenateCopy(aboutPageContentSource);
