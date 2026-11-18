@@ -15,8 +15,8 @@ const aboutPageContentSource = {
     eyebrow: "OUR GENESIS & JOURNEY",
     title: "A Vision to Clean Up the Facilities Management Industry",
     paragraphs: [
-      "Founded in Melbourne in 2008, Green Planet Services began with a clear realization: traditional commercial cleaning relied too heavily on toxic biocides, aggressive VOCs, and carbon-heavy logistics. We saw a better way forward.",
-      "Today, we manage premium corporate high-rises, industrial complexes, healthcare hubs, and boutique workspaces across Victoria. We prove daily that compliance, absolute safety, and commercial practicality don't have to be mutually exclusive.",
+      "Founded in Melbourne in 2008, Green Planet Services was established with a simple goal to provide reliable, high quality cleaning and facilities management services that make a positive difference. We believe every workplace deserves a clean, safe and healthy environment.",
+      "Today, we proudly provide professional cleaning and facilities management services across Victoria, supporting corporate offices, commercial buildings, industrial facilities and other workplaces. Our experienced team is committed to delivering consistent results, maintaining high standards and making every space a better place to work.",
     ],
     quote:
       "To deliver hospital-grade facilities management that completely eliminates synthetic endocrine-disruptors and unnecessary carbon offset dependencies.",
