@@ -56,19 +56,19 @@ const aboutPageContentSource = {
       {
         title: "Hospital-Grade Efficacy",
         description:
-          "We never compromise hygiene for sustainability. We use advanced eco-safe products proven to deliver 99.999% efficacy against pathogens.",
+          "We deliver high quality cleaning services with attention to every detail. Our team follows professional cleaning practices to maintain clean, hygienic and welcoming environments.",
         icon: "heart" as const,
       },
       {
         title: "Environmental Sincerity",
         description:
-          "We completely bypass corporate 'greenwashing.' Our solutions are truly non-toxic, zero-VOC, and run on optimized carbon-reduced logistics.",
+          "We care about the environment and aim to make responsible choices in our daily operations. We use suitable cleaning products and practical methods to reduce unnecessary waste.",
         icon: "globe" as const,
       },
       {
         title: "Radical Transparency",
         description:
-          "Upfront pricing, audited safety sheets, GECA certifications, and real-time support access with local managers. No hidden fees.",
+          "We believe in honest communication and reliable service. From clear pricing to consistent support, we make sure our customers know what to expect at every stage.",
         icon: "document" as const,
       },
     ],

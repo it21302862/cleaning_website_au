@@ -118,7 +118,7 @@ const homePageContentSource = {
         description:
           "Hospital-grade biological decontamination utilizing cold-fogging electrostatic misting with 99.999% efficacy against viral pathogens, without residual toxicity.",
         footer: "Medical Compliance Grade",
-        image: "/images/home/sanitization.jpg",
+        image: "/images/home/sanitization.jpeg",
       },
     ],
   },
