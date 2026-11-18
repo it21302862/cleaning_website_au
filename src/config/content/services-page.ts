@@ -12,11 +12,11 @@ const servicesPageContentSource = {
     showcase: {
       image: "/images/service-page-hero.jpg",
       title: "Rapid Dispatch Melbourne",
-      location: "CBD, Docklands, Dandenong & Western Suburbs",
+      location: "Across Metropolitan Melbourne & Regional Victoria",
       stats: [
-        { value: "100%", label: "Directly Vetted" },
-        { value: "0%", label: "Toxic Biocides" },
-        { value: "ISO", label: "14001 Compliant" },
+        { value: "100%", label: "Customer Focused" },
+        { value: "25+", label: "Years of Experience" },
+        { value: "VIC", label: "Wide Service Coverage" },
       ],
     },
   },
