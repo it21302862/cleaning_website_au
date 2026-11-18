@@ -62,9 +62,9 @@ const contactPageContentSource = {
       },
       {
         question:
-          "What insurance coverage and certifications does Green Planet Services hold?",
+          "How does Green Planet Services ensure consistent cleaning quality?",
         answer:
-          "We maintain public liability and workers compensation cover appropriate to commercial facilities work, with ISO 14001-aligned environmental protocols and GECA certified product selections.",
+          "Our team follows professional cleaning practices and pays close attention to every detail. We focus on delivering reliable results, maintaining clean and hygienic workplaces, and meeting each client's requirements through regular service and communication.",
       },
     ],
   },
