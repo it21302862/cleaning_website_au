@@ -94,10 +94,10 @@ const servicesPageContentSource = {
     ],
   },
   advantage: {
-    eyebrow: "Operational Audit",
+    eyebrow: "Why Choose Us",
     title: "The Green Planet Advantage",
     intro:
-      "Traditional cleaning relies on cheap petrochemical surfactants that degrade air quality and off-gas harmful VOCs. Green Planet combines hospital-tier efficacy with biological safety.",
+      "Many cleaning agencies send whoever is available and hope for the best. Green Planet sends experienced employees who know the job, across offices, retail, logistics and healthcare, including night shifts.",
     columns: [
       "Evaluation Criteria",
       "Conventional Cleaning Agencies",
@@ -105,30 +105,36 @@ const servicesPageContentSource = {
     ],
     rows: [
       {
-        feature: "Chemical Formulation",
+        feature: "Industry Experience",
         icon: "flask" as const,
         conventional:
-          "Corrosive ammonia, bleach & synthetic surfactants",
+          "One-size-fits-all approach",
         greenPlanet:
-          "GECA certified botanical virucides & zero-VOC degreasers",
+          "25+ sites across offices, retail, logistics and healthcare",
       },
       {
-        feature: "Personnel & Vetting",
+        feature: "Night-Shift Cover",
         icon: "person" as const,
-        conventional: "Unvetted tired subcontractors",
-        greenPlanet: "100% direct employees, police-checked & insured",
+        conventional: "Limited after-hours capability",
+        greenPlanet: "Experienced night-shift crews, ready by opening",
       },
       {
-        feature: "Accountability & Response",
+        feature: "Our People",
         icon: "clock" as const,
-        conventional: "No escalation path or site logs",
-        greenPlanet: "Live cloud QR-code logs & 2-hour managerial response",
+        conventional: "Inexperienced or constantly changing cleaners",
+        greenPlanet: "Experienced employees who know the job",
       },
       {
-        feature: "Compliance & ESG Reports",
+        feature: "Service Approach",
         icon: "document" as const,
-        conventional: "Paperless or ad-hoc reporting",
-        greenPlanet: "Digital WHS, MSDS & carbon-smart ESG dashboards",
+        conventional: "Fixed packages that don’t fit your site",
+        greenPlanet: "Tailored to your space, hours and needs",
+      },
+      {
+        feature: "Communication",
+        icon: "document" as const,
+        conventional: "Hard to reach when something is missed",
+        greenPlanet: "Local Melbourne team, easy to reach",
       },
     ],
   },
