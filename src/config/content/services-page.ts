@@ -138,17 +138,6 @@ const servicesPageContentSource = {
       },
     ],
   },
-  sustainability: {
-    badge: "ESG Compliance Verified",
-    title: "Improve Your Building’s Sustainability & Performance",
-    description:
-      "Environmental accountability is no longer optional for Melbourne facility managers. Green Planet reduces indoor air contamination, optimizes water usage, and delivers transparent carbon reporting without compromising hospital-grade hygiene outcomes.",
-    cards: [
-      { title: "Public Liability & WorkCover", icon: "shield" as const },
-      { title: "Closed-Loop Packaging", icon: "recycle" as const },
-      { title: "Trusted Since 2008", icon: "star" as const },
-    ],
-  },
   audit: {
     eyebrow: "Swift On-Site Proposal",
     title: "Schedule Your Free Facility Scope & Carbon Audit",

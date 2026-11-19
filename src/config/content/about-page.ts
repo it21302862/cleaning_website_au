@@ -19,12 +19,12 @@ const aboutPageContentSource = {
       "Today, we proudly provide professional cleaning and facilities management services across Victoria, supporting corporate offices, commercial buildings, industrial facilities and other workplaces. Our experienced team is committed to delivering consistent results, maintaining high standards and making every space a better place to work.",
     ],
     quote:
-      "To deliver hospital-grade facilities management that completely eliminates synthetic endocrine-disruptors and unnecessary carbon offset dependencies.",
+      "Our mission is to create cleaner, safer and healthier spaces through reliable service, professional care and a commitment to quality.",
     image: "/images/about/genesis-team.jpg",
     specialistCard: {
-      title: "Fully Vetted Specialists",
+      title: "Dedicated Cleaning Team",
       description:
-        "Every specialist is 100% police-checked, insured, and certified in rapid bio-hazard response.",
+        "Our team is committed to delivering professional, reliable cleaning services with care and attention to detail. We take pride in maintaining clean, hygienic and welcoming environments for every client.",
     },
   },
   stats: [
